@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".AdvancedActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonSix"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/sixText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonFive"
+            app:layout_constraintTop_toBottomOf="@+id/buttonNine" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithmetic_button_background"
+            android:onClick="operatorsPush"
+            android:text="@string/divideText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonNine"
+            app:layout_constraintTop_toBottomOf="@+id/buttonExit" />
+
+        <Button
+            android:id="@+id/buttonParanthesisClose"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="paranthesisPush"
+            android:text="@string/parenthesesCloseText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonAllClear"
+            app:layout_constraintTop_toBottomOf="@+id/logButton" />
+
+        <Button
+            android:id="@+id/buttonAllClear"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/clear_button_background"
+            android:onClick="allClearText"
+            android:text="@string/allClearText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonClear"
+            app:layout_constraintTop_toBottomOf="@+id/arcSinusButton" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/clear_button_background"
+            android:onClick="clearText"
+            android:text="@string/clearText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sinusButton" />
+
+        <Button
+            android:id="@+id/buttonSeven"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/sevenText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+
+        <Button
+            android:id="@+id/buttonEight"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/eightText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonSeven"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAllClear" />
+
+        <Button
+            android:id="@+id/buttonNine"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/nineText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonEight"
+            app:layout_constraintTop_toBottomOf="@+id/buttonParanthesisClose" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithmetic_button_background"
+            android:onClick="operatorsPush"
+            android:text="@string/multiplyText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonSix"
+            app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
+
+        <Button
+            android:id="@+id/buttonFive"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/fiveText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonFour"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEight" />
+
+        <Button
+            android:id="@+id/buttonFour"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/fourText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSeven" />
+
+        <Button
+            android:id="@+id/buttonOne"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/oneText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
+
+        <Button
+            android:id="@+id/buttonTwo"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/twoText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonOne"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
+
+        <Button
+            android:id="@+id/buttonThree"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/threeText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonTwo"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithmetic_button_background"
+            android:onClick="operatorsPush"
+            android:text="@string/addText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonEquals"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
+
+        <Button
+            android:id="@+id/buttonEquals"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/equals_button_background"
+            android:onClick="equalsExpression"
+            android:text="@string/equalsText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/buttonThree" />
+
+        <Button
+            android:id="@+id/buttonDecimal"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="dotPush"
+            android:text="@string/decimalText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonZero"
+            app:layout_constraintTop_toBottomOf="@+id/buttonTwo" />
+
+        <Button
+            android:id="@+id/buttonZero"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="textButtonPush"
+            android:text="@string/zeroText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="@+id/buttonOne"
+            app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithmetic_button_background"
+            android:onClick="operatorsPush"
+            android:text="@string/subtractText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonThree"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+
+        <ImageButton
+            android:id="@+id/buttonExit"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/backspace"
+            android:onClick="backspaceText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonParanthesisClose"
+            app:layout_constraintTop_toBottomOf="@+id/logNaturalButton"
+            app:srcCompat="@drawable/backspace" />
+
+        <Button
+            android:id="@+id/logButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/logText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/arcSinusButton"
+            app:layout_constraintTop_toBottomOf="@+id/xSquareButton" />
+
+        <Button
+            android:id="@+id/sinusButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:contextClickable="false"
+            android:onClick="advancedButtonPush"
+            android:text="@string/sinText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cosinusButton" />
+
+        <Button
+            android:id="@+id/arcSinusButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/arcSinText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/sinusButton"
+            app:layout_constraintTop_toBottomOf="@+id/arcCosinusButton" />
+
+        <Button
+            android:id="@+id/logNaturalButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/naturalLogText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/logButton"
+            app:layout_constraintTop_toBottomOf="@+id/xPowerYbutton" />
+
+        <Button
+            android:id="@+id/xSquareButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/xSquaredText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/arcCosinusButton"
+            app:layout_constraintTop_toBottomOf="@+id/precentButton" />
+
+        <Button
+            android:id="@+id/cosinusButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/cosText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tangensButton" />
+
+        <Button
+            android:id="@+id/arcCosinusButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/arcCosText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/cosinusButton"
+            app:layout_constraintTop_toBottomOf="@+id/arcTangensButton" />
+
+        <Button
+            android:id="@+id/xPowerYbutton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/xPowerYText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/xSquareButton"
+            app:layout_constraintTop_toBottomOf="@+id/squareButton" />
+
+        <Button
+            android:id="@+id/tangensButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/tanText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/arcTangensButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/arcTanText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/tangensButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/precentButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/precentText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/arcTangensButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/squareButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_background"
+            android:onClick="advancedButtonPush"
+            android:text="@string/squareRootText"
+            android:textColor="@color/tanAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/precentButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/previousCalculationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingTop="80dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="@+id/displayEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/displayEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/displayEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="@string/displayHint"
+        android:importantForAutofill="no"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textColorHint="@color/greyAccent"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/previousCalculationView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
